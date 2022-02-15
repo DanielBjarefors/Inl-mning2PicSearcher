@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PicSearcher</title>
+  <link rel="stylesheet" href="PixabaySearch.css">
+  <script src="PixabySearch.jsx" defer></script>
+  <meta name="keywords" content="picture, search, pixabay">
+  <meta name="description" content="Search for pictures by tags">
+</head>
+<body>
+  <h1>PicSearcher</h1>
+  <form id="frm1" action="https://pixabay.com/api">
+      
+    <label for=""> What are you looking for? </label>
+    <input id="'searchTerm" type="text" name="question" placeholder="Sunset, Landscape, Cat?">
+    
+    <label for="">Filter by color: </label>
+    <select id="colors" name="colors">
+      <option value="">No color</option>
+      <option value="Blue">Blue</option>
+      <option value="Red">Red</option>
+      <option value="Yellow">Yellow</option>
+      <option value="Green">Green</option>
+      <option value="White">White</option>
+      <option value="Black">Black</option>
+      <option value="Pink">Pink</option>
+      <option value="Purple">Purple</option>
+      <option value="Orange">Orange</option>
+    </select>  
+  </form> 
+  
+  <button onclick="Search(0)" id='search'>Search</button>
+  <button onclick="Search(1)" id='prev'>Previous</button>
+  <button onclick="Search(2)" id='next'>Next</button>
+  
+  <p><span id="pages"> </span></p>
+  <p><span id="noResults"> </span></p>
+  <ul id="pictures"></ul>
+
+</body>
+</html>
