@@ -1,6 +1,6 @@
     
     //prevent enter in input
-    window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
+    // window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
 
     let q =''; //api query string
     let pageNum =0;   //page counter
@@ -26,20 +26,27 @@
         else {
             pageNum =1;
         }
+      
+       
+
+        let color='';
         if (button===0) { 
             q='';
-            let inputQ = document.getElementById('frm1');
-            for (let i = 0; i < inputQ.length; i++) {
-                q+= ' '+inputQ.elements[i].value;            
-            }
+            let inputQ = document.querySelector('#searchTerm'); 
+            q+= ' '+inputQ.value;              
+            c1 = document.getElementById('colors'); 
+            color = c1[c1.options.selectedIndex].value 
+            
         }
         //send and receive request
         let params = new URLSearchParams({
             key:'25578056-62bc3da3830a7bfd7a3d93ef8',
             q: q,
             page: pageNum,
-            per_page: '10'                
+            per_page: '10',  
+            colors: color    
         });
+
         let response = await fetch('https://pixabay.com/api/?' + params);
         let json = await response.json();
         //display no results
@@ -62,10 +69,9 @@
                 p2.textContent='Tags: ' + json.hits[i].tags;
                 //append list, img, user and tag to ul
                 document.querySelector('#pictures').appendChild(li);
-                document.querySelector('#pictures li:last-child').append(img);
-
-                document.querySelector('#pictures li:last-child').append(p1);
-                document.querySelector('#pictures li:last-child').append(p2);
+                li.append(img);
+                li.append(p1);
+                li.append(p2);
             }
 
         }
