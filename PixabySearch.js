@@ -2,7 +2,7 @@
 let input = document.getElementById("searchTerm")
 input.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
-        Search(0);
+        search(0);
     }
 });
 let color = '';
@@ -14,7 +14,7 @@ let nextBtn = document.querySelector('#next');
 nextBtn.disabled = true;
 prevBtn.disabled = true;
 
-async function Search(button) {
+async function search(button) {
     //clear page
     let parent = document.querySelector('#pictures')
     while (parent.firstChild) {
