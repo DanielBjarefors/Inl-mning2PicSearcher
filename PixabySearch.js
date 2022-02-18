@@ -1,6 +1,11 @@
     
-    //prevent enter in input
-    // window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
+   document.getElementById("searchTerm")
+   .addEventListener("keydown", function(event) {
+   event.preventDefault();
+   if (event.key === 13) {
+       document.getElementById("search").click();
+   }
+});
 
     let q =''; //api query string
     let pageNum =0;   //page counter

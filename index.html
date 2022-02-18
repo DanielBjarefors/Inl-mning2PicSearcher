@@ -12,7 +12,7 @@
 </head>
 <body>
   <h1>PicSearcher</h1>
-  <form id="frm1" action="https://pixabay.com/api">
+  <form id="frm1" >
       
     <label for=""> What are you looking for? </label>
     <input id="searchTerm" type="text" name="question" placeholder="Sunset, Landscape, Cat?">
@@ -32,7 +32,7 @@
     </select>  
   </form> 
   
-  <button onclick="Search(0)" id='search'>Search</button>
+  <button type="submit" onclick="Search(0)" id='search'>Search</button>
   <button onclick="Search(1)" id='prev'>Previous</button>
   <button onclick="Search(2)" id='next'>Next</button>
   
