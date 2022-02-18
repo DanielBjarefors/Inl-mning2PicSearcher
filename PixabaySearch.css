@@ -17,7 +17,6 @@ label{
     content: "\a";
     white-space: pre;
 }
-
 select {
     width: 177;    
     border: 1px solid var(--select-border);
@@ -36,13 +35,12 @@ h1, label, input,option,button,select{
 p{
     font-weight: 900
 }
-form{
+#upper{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
 }
-
 button, select,input {
     display: inline-block;
     padding: 5px 25px;
@@ -51,11 +49,8 @@ button, select,input {
     color: rgb(48, 47, 47);
     border-radius: 15px;
     box-shadow: 0 9px rgb(53, 53, 53);
-    /* max-width:fit-content; */
-    /* justify-content: center; */
-  }
-  
-  button:active:enabled {
+  }  
+button:active:enabled {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
@@ -70,7 +65,7 @@ button:hover:enabled{
     border-radius: 15px;
     cursor:pointer;
 }
-  li{
+li{
     border: 3px solid rgb(154, 160, 241);
     border-radius: 4px;
     padding: 5px;
