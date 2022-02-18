@@ -5,7 +5,7 @@ input.addEventListener("keydown", function (event) {
         Search(0);
     }
 });
-
+let color = '';
 let q = ''; //api query string
 let pageNum = 0;   //page counter
 let prevBtn = document.querySelector('#prev');
@@ -30,8 +30,7 @@ async function Search(button) {
     else {
         pageNum = 1;
     }
-
-    let color = '';
+    
     if (button === 0) {
         q = '';
         let inputQ = document.querySelector('#searchTerm');
