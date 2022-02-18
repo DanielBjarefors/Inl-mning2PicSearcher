@@ -15,23 +15,28 @@
   <h1>PicSearcher</h1>
   <div id="upper">
     <label for=""> What are you looking for? </label>
-    <input id="searchTerm" type="text" name="question" placeholder="Sunset, Landscape, Cat?">
+    <input id="searchTerm" type="text" placeholder="Sunset, Landscape, Cat?">
     <label for="">Filter by color: </label>
     <select id="colors" name="colors">
       <option value="">Any color</option>
-      <option value="blue">Blue</option>
+      <option value="grayscale">Grayscale</option>
+      <option value="transparent">Transparent</option>
       <option value="red">Red</option>
+      <option value="orange">Orange</option>
       <option value="yellow">Yellow</option>
       <option value="green">Green</option>
-      <option value="white">White</option>
-      <option value="black">Black</option>
+      <option value="turquoise">Turquoise</option>
+      <option value="blue">Blue</option>
+      <option value="lilac">Lilac</option>
       <option value="pink">Pink</option>
-      <option value="purple">Purple</option>
-      <option value="orange">Orange</option>
+      <option value="white">White</option>
+      <option value="gray">Gray</option>
+      <option value="black">Black</option>
+      <option value="brown">Brown</option>
     </select>
   </div>
 
-  <button type="submit" onclick="Search(0)" id='search'>Search</button>
+  <button onclick="Search(0)" id='search'>Search</button>
   <button onclick="Search(1)" id='prev'>Previous</button>
   <button onclick="Search(2)" id='next'>Next</button>
 
